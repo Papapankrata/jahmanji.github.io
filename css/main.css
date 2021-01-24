@@ -1,0 +1,783 @@
+/*--------------header-------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+
+    width: 0px;
+
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+
+}
+
+.logoText {
+    width: 28px;
+    height: 28px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: crosshair;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    border: 2px black solid;
+    background-color: white;
+    transition: 3s;
+}
+
+.logoText:hover {
+    color: white;
+    background-color: black;
+    transform: scale(-1,1) rotateX(360deg) translatez(130px) rotateX(-360deg);
+    transition: 0s;
+}
+
+.top-menu {
+    margin: 0;
+    text-align: right;
+}
+
+.header {
+    display: flex;
+    vertical-align: middle;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    z-index: 2;
+    background-color: black;
+}
+
+.top-menu a {
+    font-size: 12px;
+    cursor: crosshair;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    transition: 1.5s;
+}
+
+.top-menu a:hover {
+    text-decoration: none;
+    color: #3498db;
+    transition: 1.5s;
+}
+
+.top-menu a:after {
+    display: block;
+    width: 0;
+    content: '';
+    height: 2px;
+    background-color: #3498db;
+    transition: .3s;
+}
+
+.top-menu a:hover:after {
+    width: 100%;
+}
+
+.top-menu__item {
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 40px;
+}
+
+.top-menu__item:last-child {
+    margin-right: 0;
+    padding: 8px 12px;
+    background-color: #3498db;
+    border: 1px #3498db solid;
+    border-radius: 5px;
+    transition: 1.5s;
+}
+
+.top-menu__item:last-child:hover {
+    color: #3498db;
+    background-color: white;
+    border: 1px white solid;
+    transition: 1.5s;
+}
+
+/*---------------main-------------*/
+
+.p-o {
+    padding: 0;
+}
+
+.icon-spaceship {
+    display: block;
+    position: relative;
+    z-index: 2;
+    margin:0 auto 75px auto;
+    font-size: 50px;
+    width: 50px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s linear;
+}
+
+.icon-spaceship:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?uqqkao');
+    src:  url('../fonts/icomoon.eot?uqqkao#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?uqqkao') format('truetype'),
+    url('../fonts/icomoon.woff?uqqkao') format('woff'),
+    url('../fonts/icomoon.svg?uqqkao#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-spaceship:before {
+    content: "\e900";
+}
+
+.exploreBlock {
+    margin-top: 105px;
+    margin-bottom: 60px;
+    text-align: center;
+    color: white;
+}
+
+.parExplor {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 19px;
+}
+
+.twoInOneButton {
+    display: table;
+    position: relative;
+    vertical-align: middle;
+    margin-right: auto;
+    margin-left: auto;
+    height: 60px;
+    width: 340px;
+}
+
+.button {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.oneButton {
+    cursor: pointer;
+    background-color: #59a3fc;
+    border-radius: 10px 0 0 10px;
+}
+
+.oneButton:hover, .twoButton:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+}
+
+.twoButton {
+    cursor: pointer;
+    background-color: #3d92f9;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 20px;
+}
+
+.Amp {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #0078b2;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.Amp a {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel-item {
+    height: 620px;
+    text-align: center;
+    color: white;
+    padding-top: 105px;
+    padding-bottom: 75px;
+}
+
+.h1-explore {
+    display: inline-block;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    transition: .5s linear;
+}
+
+.h1-explore:hover {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    padding: 0;
+}
+
+.p-explore {
+    padding-bottom: 60px;
+}
+
+/*-----------------learn more-----------------*/
+
+.raw {
+    text-align: center;
+}
+
+.learnMore {
+    background-color: #59a3fc;
+}
+
+.learn-more-block {
+    display: flex;
+    text-align: center;
+}
+
+.logoBlock {
+    display: flex;
+    vertical-align: middle;
+    width: 97px;
+    height: 97px;
+    background-color: #a4c0e0;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.logoBlock img {
+    height: 50px;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: 2s;
+}
+
+.logoBlock img:hover {
+    transform: scale(-1,1);
+    transition: 0s;
+}
+
+.fl {
+    filter: brightness(0) invert(1) drop-shadow(3px 5px 5px #000);
+}
+
+h3 {
+    color: #555555;
+    padding: 0;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.p2-logo-block {
+    padding-top: 20px;
+    color: #fdf8ff;
+}
+
+/*--------------how we work-------------*/
+
+.h2-stat-block {
+    font-weight: bold;
+    padding-top: 80px;
+    color: white;
+}
+
+.h3-stat-block {
+    padding-top: 50px;
+    color: white;
+}
+
+.stat-block {
+    height: 700px;
+    background-color: transparent;
+}
+
+ p-hints, h2-hints {
+    font-size: 0;
+}
+
+.hints:hover {
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    color: #555555;
+    background-color: #b3d7ff;
+    margin: 0 auto;
+    transition: 1s;
+}
+
+.hints:hover p-hints {
+    display: block;
+    font-size: 19px;
+}
+
+.hints:hover h2-hints {
+    display: block;
+    font-size: 2rem;
+    background-color: transparent;
+}
+
+.flex-hints-block {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.hints {
+    position: relative;
+    color: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 100px auto;
+    transition: 1s;
+}
+
+.yellow-block  {
+    background-color: #fff75e;
+    border: 2px #fff75e solid;
+}
+
+.red-block {
+    background-color: #ff6b50;
+    border: 2px #ff6b50 solid;
+}
+
+.green-block {
+    background-color: #87ff7e;
+    border: 2px #87ff7e solid;
+}
+
+.blue-block {
+    background-color: #17048a;
+    border: 2px #17048a solid;
+}
+
+/*-------------our works------------*/
+
+.our-work {
+    background-color: transparent;
+}
+
+.portfolio {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-size {
+    width: 100%;
+}
+
+.flex-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.view {
+    display: inline-block;
+    width: 50%;
+    height: 300px;
+    margin: 10px;
+    float: left;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    background: #fff url(../images/astronomy-3187445_1920.jpg) no-repeat center center;
+}
+
+.view .mask {
+    width: 50%;
+    height: 300px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.view .content {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.view img {
+    display: block;
+    position: relative;
+}
+
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 35px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0;
+}
+
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center;
+}
+
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+}
+
+.view a.info:hover {
+    box-shadow: 0 0 5px #000;
+}
+
+.view-tenth img {
+    transform: scaleY(1);
+    transition: all 0.7s ease-in-out;
+}
+.view-tenth .mask {
+    width: 100%;
+    background-color: rgba(104, 211, 255, 0.3);
+    text-align: center;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+.view-tenth h2{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: 20px 40px 0px 40px;
+    transform: scale(0);
+    color: #333;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+.view-tenth p {
+    color: #333;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+}
+.view-tenth a.info {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+}
+
+.view-tenth:hover img {
+    transform: scale(10);
+    opacity: 0;
+}
+.view-tenth:hover .mask {
+    opacity: 1;
+}
+.view-tenth:hover h2,
+.view-tenth:hover p,
+.view-tenth:hover a.info{
+    transform: scale(1);
+    opacity: 1;
+}
+
+/*--------testimonials-----our team------------*/
+
+.testimonials {
+    text-align: center;
+    background-color: transparent;
+}
+
+.armstrong-block {
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.photoNil {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 2px solid #edd440;
+    background-image: url("../images/a3_2320115b.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.children-block {
+    display:none;
+    background: transparent;
+    border: 5px #6699ed outset;
+    border-radius: 5px;
+    width:500px;
+    height:200px;
+
+}
+
+.photoNil:hover ~.photoNil-hover .children-block{
+    display: inline-block;
+}
+
+.god-block {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.mainest-block {
+    display: inline-block;
+    font-family: 'Anton', sans-serif;
+    width: 25%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-block {
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    transition: all 1s ease-in-out;
+}
+
+.next-block {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 50%;
+    background-color: #477bd3;
+    border: 5px solid #ffffff;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: -15px;
+    text-align: center;
+}
+
+h1 {
+    margin: auto;
+}
+
+h3 {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.41);
+}
+
+.main-block:hover {
+    transition: all 1s ease-in-out;
+}
+
+.q-block {
+    background-image: url("../images/2-deadpool-png-vadim-pavlov.jpg");
+}
+
+.w-block {
+    background-image: url("../images/1520766502149621529.jpg");
+}
+
+.t-block {
+    background-image: url("../images/nobodylikesyou.jpg");
+}
+
+.r-block {
+    background-image: url("../images/f2ec1d8860fadb1d7e9b7b0e3e2cabcf.jpg");
+}
+
+.q-block:hover {
+    background-image: url("../images/pic_bb19c395e5ec2cd76324f31f2f120741.jpg");
+}
+
+.w-block:hover {
+    background-image: url("../images/Bankoboev.Ru_hit_ledzher_v_molodosti.jpg");
+}
+
+.t-block:hover {
+    background-image: url("../images/e6ddeef5ebab020bc378a31da482989d.jpeg");
+}
+
+.r-block:hover {
+    background-image: url("../images/choi-min-sik-1.jpg");
+}
+
+.h-our-team {
+    color: white;
+}
+
+/*-----------map-----------*/
+
+#map {
+    width: 100%;
+}
+
+/---------------partners--------/
+
+.partners-block {
+    background-color: #1114bc;
+}
+
+.slick-slide img {
+    display:table-cell;
+    vertical-align:middle;
+    width: 30%;
+    height: 100%;
+    margin: auto;
+    padding: 75px 0;
+}
+
+.slick-track {
+    display: flex;
+}
+
+.slick-initialized .slick-track {
+    display: flex;
+    align-items: center;
+}
+
+.footer-p {
+    color: white;
+    text-transform: uppercase ;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer-ul {
+    color: white;
+}
+
+.small-info-block {
+    display: inline-block;
+    width: 30%;
+    text-align: left;
+    vertical-align: top;
+}
+
+#toTop {
+    width:50px;
+    height: 50px;
+    border:3px solid white;
+    border-radius: 50%;
+    background: rgba(52, 152, 219, 0.51);
+    text-align:center;
+    padding:5px;
+    position:fixed;
+    bottom:30px; /* отступ кнопки от нижнего края страницы*/
+    right:30px;
+    cursor:pointer;
+    display:none;
+    color:white;
+    font-family:verdana;
+    font-size:23px;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: black;
+}
+
+.footer-li a {
+    font-size: 16px;
+    cursor: crosshair;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    transition: 1.5s;
+}
+
+.footer-li a:hover {
+    text-decoration: none;
+    color: #3498db;
+    transition: 1.5s;
+}
+
+.footer-li a:after {
+    display: block;
+    width: 0;
+    content: '';
+    height: 2px;
+    background-color: #3498db;
+    transition: .3s;
+}
+
+.footer-li a:hover:after {
+    width: 100%;
+}
+
+.checkpoint {
+    height: 50px;
+}
